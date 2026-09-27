@@ -1,0 +1,135 @@
+:root {
+  --soft-primary: #84d187;
+  --primary: #00b207;
+  --hard-primary: #2c742f;
+  --hard-primary-rgb: 44, 116, 47;
+  --warning: #ff8a00;
+  --danger: #ea4b48;
+  --white: #ffffff;
+  --gray-9: #1a1a1a;
+  --gray-8: #333333;
+  --gray-7: #4d4d4d;
+  --gray-6: #666666;
+  --gray-5: #808080;
+  --gray-4: #999999;
+  --gray-3: #b3b3b3;
+  --gray-2: #cccccc;
+  --gray-1: #e6e6e6;
+  --gray-half: #f2f2f2;
+  --green-gray-9: #002603;
+  --green-gray-8: #173b1a;
+  --green-gray-7: #2b572e;
+  --geren-gray-6: #406b42;
+  --green-gray-5: #618062;
+  --green-gray-4: #7a997c;
+  --green-gray-3: #96b297;
+  --green-gray-2: #b4ccb4;
+  --green-gray-1: #dae5da;
+  --green-gray-half: #edf2ee;
+
+  --font-family: "Poppins", sans-serif;
+
+  --font-display-1-400: 400 80px/98px "Poppins", sans-serif;
+  --font-display-1-600: 600 80px/98px "Poppins", sans-serif;
+  --heading-1-400: 400 72px/120% "Poppins", sans-serif;
+  --heading-1-600: 600 72px/120% "Poppins", sans-serif;
+  --heading-2-400: 400 56px/64px "Poppins", sans-serif;
+  --heading-2-600: 600 56px/64px "Poppins", sans-serif;
+  --heading-3-400: 400 48px/56px "Poppins", sans-serif;
+  --heading-3-600: 600 48px/56px "Poppins", sans-serif;
+  --heading-4-400: 400 40px/48px "Poppins", sans-serif;
+  --heading-4-600: 600 40px/48px "Poppins", sans-serif;
+  --heading-5-400: 400 32px/120% "Poppins", sans-serif;
+  --heading-5-600: 600 32px/120% "Poppins", sans-serif;
+
+  --body-xxl-400: 400 24px/32px "Poppins", sans-serif;
+  --body-xxl-500: 500 24px/32px "Poppins", sans-serif;
+  --body-xxl-600: 600 24px/32px "Poppins", sans-serif;
+  --body-xl-400: 400 20px/150% "Poppins", sans-serif;
+  --body-xl-500: 500 20px/150% "Poppins", sans-serif;
+  --body-xl-600: 600 20px/150% "Poppins", sans-serif;
+  --body-large-400: 400 18px/150% "Poppins", sans-serif;
+  --body-large-500: 500 18px/150% "Poppins", sans-serif;
+  --body-large-600: 600 18px/150% "Poppins", sans-serif;
+  --body-medium-400: 400 16px/150% "Poppins", sans-serif;
+  --body-medium-500: 500 16px/150% "Poppins", sans-serif;
+  --body-medium-600: 600 16px/150% "Poppins", sans-serif;
+  --body-small-400: 400 14px/150% "Poppins", sans-serif;
+  --body-small-500: 500 14px/150% "Poppins", sans-serif;
+  --body-small-600: 600 14px/150% "Poppins", sans-serif;
+  --body-tiny-400: 400 12px/130% "Poppins", sans-serif;
+  --body-tiny-500: 500 12px/130% "Poppins", sans-serif;
+  --body-tiny-600: 600 12px/130% "Poppins", sans-serif;
+
+  --radius: 6px;
+
+  --transition: all 0.3s ease-in-out;
+}
+
+*,
+:after,
+:before,
+::backdrop {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  /* -webkit-font-smoothing: antialiased; */
+  /* -moz-osx-font-smoothing: grayscale; */
+  /* color: var(--color-gray-900); */
+  /* background-color: var(--color-white); */
+}
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: var(--container-3xl);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
