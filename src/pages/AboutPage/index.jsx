@@ -9,7 +9,7 @@ import bgabout2 from "../../assets/images/About/BGAbout_2.png";
 import { path } from "../../Constants/Paths";
 import IconButton from "../../components/common/IconButton";
 import { Temoignages } from "../../Constants/Temoignage";
-
+import { ArrowButton } from "./styles";
 import {
   FaLeaf,
   FaHeadset,
@@ -18,7 +18,7 @@ import {
   FaTruck,
   FaBox,
 } from "react-icons/fa";
-import { BsCheckCircleFill, BsArrowRight } from "react-icons/bs";
+import { BsCheckCircleFill, BsArrowRight, BsArrowLeft } from "react-icons/bs";
 import {
   SectionGrid,
   TextContent,
@@ -34,6 +34,14 @@ import {
   CheckIcon,
 } from "./styles";
 import TestimonialCard from "../../components/common/TestimonialCard";
+import { members } from "../../Constants/TeamMembers";
+import Carousel from "../../components/common/Carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import { useState } from "react";
+import { VscHome } from "react-icons/vsc";
+import { IoIosArrowForward } from "react-icons/io";
+import MyBreadcrumb from "../../components/common/MyBreadcrumb";
 
 const aboutsections = [
   {
@@ -54,6 +62,9 @@ const aboutsections = [
 ];
 
 function AboutPage() {
+  const [prevEl, setPrevEl] = useState(null);
+  const [nextEl, setNextEl] = useState(null);
+
   return (
     <AppTemplate
       pageTitle="About"
@@ -70,7 +81,8 @@ function AboutPage() {
       }}
     >
       <AboutPageStyles>
-        <div
+        {/* old breadcrumb */}
+        {/* <div
           style={{
             backgroundImage: `url(${breadcrumb})`,
             backgroundSize: "cover",
@@ -86,13 +98,22 @@ function AboutPage() {
           <div
             className="container"
             style={{
-              color: "var(--white)",
+              color: "var(--gray-5)",
+              display: "flex",
+              alignItems: "center",
+              gap: "12px",
+              font: "var(--body-medium-400)",
             }}
           >
-            {" "}
-            Home and then About
+            <a href="/">
+              <VscHome size={24} />
+            </a>
+            <IoIosArrowForward />
+            <span style={{ color: "var(--primary)" }}>About</span>
           </div>
-        </div>
+        </div> */}
+
+        <MyBreadcrumb bgImage={breadcrumb} />
 
         {/* first */}
         <div>
@@ -237,6 +258,42 @@ function AboutPage() {
         </div>
 
         <div>
+          <section className="container">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "8px",
+                marginBlockEnd: "32px",
+              }}
+            >
+              <h2
+                style={{
+                  font: "var(--heading-2-600)",
+                  color: "var(--gray-9)",
+                }}
+              >
+                Our Awesome Team
+              </h2>
+              <span
+                style={{
+                  font: "var(--body-medium-400)",
+                  color: "var(--gray-6)",
+                  textAlign: "center",
+                }}
+              >
+                Pellentesque a ante vulputate leo porttitor luctus sed eget
+                eros. Nulla et rhoncus <br /> neque. Duis non diam eget est
+                luctus tincidunt a a mi.
+              </span>
+            </div>
+            <Carousel teamMembers={members} />
+          </section>
+        </div>
+
+        <div>
           {/* Temoiniages */}
           <section
             className="container"
@@ -263,21 +320,34 @@ function AboutPage() {
               >
                 Client Testimonials
               </h2>
-              <span>navigation arrows</span>
+              <span style={{ display: "flex", gap: "12px" }}>
+                <ArrowButton ref={(node) => setPrevEl(node)}>
+                  <BsArrowLeft />
+                </ArrowButton>
+                <ArrowButton ref={(node) => setNextEl(node)}>
+                  <BsArrowRight />
+                </ArrowButton>
+              </span>
             </div>
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-                gap: "24px",
+
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={24}
+              slidesPerView={3}
+              navigation={{ prevEl, nextEl }}
+              breakpoints={{
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
               }}
+              style={{ width: "100%" }}
             >
-              <TestimonialCard data={Temoignages[0]} />
-              <TestimonialCard data={Temoignages[1]} />
-              <TestimonialCard data={Temoignages[2]} />
-            </div>
+              {Temoignages.map((testimonial) => (
+                <SwiperSlide key={testimonial.id}>
+                  <TestimonialCard data={testimonial} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </section>
         </div>
       </AboutPageStyles>

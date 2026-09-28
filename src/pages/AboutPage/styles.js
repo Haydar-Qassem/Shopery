@@ -88,7 +88,7 @@ export const IconCircle = styled.div`
 
 export const FeatureText = styled.span`
   font: var(--body-small-500, 500 14px "Poppins", sans-serif);
-  color: var(--gray-9, #1a1a1a);
+  color: var(--gray-9);
 `;
 
 export const BulletList = styled.ul`
@@ -114,21 +114,33 @@ export const CheckIcon = styled.div`
   display: flex;
 `;
 
-export const PrimaryButton = styled.button`
-  align-self: flex-start;
-  background-color: var(--primary);
-  color: var(--white);
-  font: var(--body-medium-600);
-  border: none;
-  border-radius: 43px;
-  padding: 14px 32px;
+export const ArrowButton = styled.button`
+  background: var(--white);
+  border: 1px solid var(--gray-1);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
   cursor: pointer;
+  color: var(--gray-9);
+  font-size: 20px;
   transition: var(--transition);
 
   &:hover {
-    background-color: var(--primary);
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover {
+      background: var(--white);
+      color: var(--gray-9);
+      border-color: var(--gray-1);
+    }
   }
 `;
