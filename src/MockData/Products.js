@@ -25,6 +25,7 @@ export const products = [
     ],
     image: GreenApple,
     OfferExpDate: Date.now() + 2 * 24 * 60 * 60 * 1000,
+    stockStatus: "inStock",
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ export const products = [
     Tags: [],
     image: FreshIndianMalta,
     offerExpDate: Date.now() + 2 * 24 * 60 * 60 * 1000,
+    stockStatus: "inStock",
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ export const products = [
     reviewsCount: 50,
     Tags: [],
     image: ChineseCabbage,
+    stockStatus: "outOfStock",
   },
   {
     id: 4,
@@ -57,6 +60,7 @@ export const products = [
     Tags: [],
     image: GreenLettuce,
     offerExpDate: Date.now() + 3 * 24 * 60 * 60 * 1000,
+    stockStatus: "inStock",
   },
   {
     id: 5,
@@ -67,6 +71,7 @@ export const products = [
     reviewsCount: 10,
     Tags: [],
     image: Eggplant,
+    stockStatus: "inStock",
   },
   {
     id: 6,
@@ -78,6 +83,7 @@ export const products = [
     Tags: [],
     image: BigPotatoes,
     offerExpDate: Date.now() + 2 * 24 * 60 * 60 * 1000 + 15 * 60 * 60 * 1000,
+    stockStatus: "outOfStock",
   },
   {
     id: 7,
@@ -93,6 +99,7 @@ export const products = [
       },
     ],
     image: Corn,
+    stockStatus: "outOfStock",
   },
   {
     id: 8,
@@ -118,6 +125,7 @@ export const products = [
       },
     ],
     image: GreenCapsicum,
+    stockStatus: "inStock",
   },
   {
     id: 10,
@@ -128,5 +136,6 @@ export const products = [
     reviewsCount: 5,
     Tags: [],
     image: GreenChili,
+    stockStatus: "outOfStock",
   },
 ];

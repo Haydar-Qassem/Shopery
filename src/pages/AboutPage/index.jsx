@@ -8,7 +8,7 @@ import aboutimg3 from "../../assets/images/About/About_3.png";
 import bgabout2 from "../../assets/images/About/BGAbout_2.png";
 import { path } from "../../Constants/Paths";
 import IconButton from "../../components/common/IconButton";
-import { Temoignages } from "../../Constants/Temoignage";
+import { Temoignages } from "../../MockData/Temoignage";
 import { ArrowButton } from "./styles";
 import {
   FaLeaf,
@@ -34,7 +34,7 @@ import {
   CheckIcon,
 } from "./styles";
 import TestimonialCard from "../../components/common/TestimonialCard";
-import { members } from "../../Constants/TeamMembers";
+import { members } from "../../MockData/TeamMembers";
 import Carousel from "../../components/common/Carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";

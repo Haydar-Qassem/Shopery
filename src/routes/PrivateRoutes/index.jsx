@@ -12,6 +12,13 @@ function PrivateRoutes() {
   ) : (
     <Navigate to="/account/login" state={{ from: location }} replace />
   );
+
+  // the following is for testing private routes
+  // return true ? (
+  //   <Outlet />
+  // ) : (
+  //   <Navigate to="/account/login" state={{ from: location }} replace />
+  // );
 }
 
 export default PrivateRoutes;

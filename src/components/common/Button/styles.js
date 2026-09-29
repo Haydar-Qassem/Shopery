@@ -79,4 +79,12 @@ export const ButtonStyles = styled.button`
         `;
     }
   }}
+
+
+
+  &:disabled {
+    background-color: var(--gray-half);
+    color: var(--gray-3);
+    cursor: not-allowed;
+  }
 `;

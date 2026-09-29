@@ -16,13 +16,13 @@ import IconButton from "../../components/common/IconButton";
 import bannerimage from "../../assets/images/Banners/DiscountBanner.png";
 import SecondBannerSection from "./Home-Components/SecondBannerSection";
 
-// Constants
+// Constants and Mock Data
 import { path } from "../../Constants/Paths";
 import { categories } from "../../Constants/Categories";
-import { products } from "../../Constants/Products";
+import { products } from "../../MockData/Products";
 import { features } from "../../Constants/Features";
-import { mockBlogData } from "../../Constants/BlogData";
-import { Temoignages } from "../../Constants/Temoignage";
+import { mockBlogData } from "../../MockData/BlogData";
+import { Temoignages } from "../../MockData/Temoignage";
 
 function HomePage() {
   return (
