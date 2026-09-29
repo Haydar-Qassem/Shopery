@@ -64,6 +64,7 @@
   --radius: 6px;
 
   --transition: all 0.3s ease-in-out;
+  --transition-fast: all 0.15s ease-in-out;
 }
 
 *,
