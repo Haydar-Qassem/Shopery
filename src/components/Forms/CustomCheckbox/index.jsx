@@ -3,7 +3,7 @@ import useFormField from "../hooks/useFormField";
 import useFormFieldState from "../hooks/useFormFieldState";
 import { CheckboxWrapper, CheckboxControl, CheckboxLabel } from "./styles";
 
-function CustomCheckbox({ name, label, warning }) {
+function CustomCheckbox({ name, label, warning, span, optional }) {
   const { field, meta, visualState, handleFocus, handleBlur } = useFormField(
     name,
     {
@@ -19,6 +19,8 @@ function CustomCheckbox({ name, label, warning }) {
       state={fieldState}
       error={meta.touched ? meta.error : undefined}
       warning={warning}
+      span={span}
+      optional={optional}
     >
       <CheckboxWrapper>
         <CheckboxControl

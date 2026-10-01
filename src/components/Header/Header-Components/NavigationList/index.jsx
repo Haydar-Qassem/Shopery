@@ -8,6 +8,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import BigCategoriesDropDown from "../BigCategoriesDropDown";
 import SmallCategoriesDropDown from "../SmallCategoriesDropDown";
+import { path } from "../../../../Constants/Paths";
 
 function NavigationList({ dontShowContactUs, variant }) {
   const [isHomeOpen, setIsHomeOpen] = useState(false);
@@ -36,7 +37,7 @@ function NavigationList({ dontShowContactUs, variant }) {
         >
           <NavLink
             as={Link}
-            to="/"
+            to={path.home}
             style={{
               display: "flex",
               alignItems: "center",
@@ -47,9 +48,9 @@ function NavigationList({ dontShowContactUs, variant }) {
           </NavLink>
 
           <NavDropdownMenu $isOpen={isHomeOpen}>
-            <Link to="/wishlist">Wishlist</Link>
-            <Link to="/shoppingcart">Shopping Cart</Link>
-            <Link to="/shoppingcart/checkout">Checkout</Link>
+            <Link to={path.wishlist}>Wishlist</Link>
+            <Link to={path.cart}>Shopping Cart</Link>
+            <Link to={path.checkout}>Checkout</Link>
           </NavDropdownMenu>
         </NavDropdownContainer>
       </li>
@@ -61,7 +62,7 @@ function NavigationList({ dontShowContactUs, variant }) {
         >
           <NavLink
             as={Link}
-            to="/"
+            to={path.home}
             style={{
               display: "flex",
               alignItems: "center",
@@ -72,9 +73,9 @@ function NavigationList({ dontShowContactUs, variant }) {
           </NavLink>
 
           <NavDropdownMenu $isOpen={isShopOpen}>
-            <Link to="/shop/category">Categories</Link>
-            <Link to="/wishlist">Wishlist</Link>
-            <Link to="/shoppingcart">Shopping Cart</Link>
+            <Link to={path.category}>Categories</Link>
+            <Link to={path.wishlist}>Wishlist</Link>
+            <Link to={path.cart}>Shopping Cart</Link>
           </NavDropdownMenu>
         </NavDropdownContainer>
       </li>
@@ -86,7 +87,7 @@ function NavigationList({ dontShowContactUs, variant }) {
         >
           <NavLink
             as={Link}
-            to="/"
+            to={path.home}
             style={{
               display: "flex",
               alignItems: "center",
@@ -97,8 +98,8 @@ function NavigationList({ dontShowContactUs, variant }) {
           </NavLink>
 
           <NavDropdownMenu $isOpen={isPagesOpen}>
-            <Link to="/account/dashboard">My Account</Link>
-            <Link to="/faqs">FAQs</Link>
+            <Link to={path.dashboard}>My Account</Link>
+            <Link to={path.faqs}>FAQs</Link>
           </NavDropdownMenu>
         </NavDropdownContainer>
       </li>
@@ -110,7 +111,7 @@ function NavigationList({ dontShowContactUs, variant }) {
         >
           <NavLink
             as={Link}
-            to="/"
+            to={path.home}
             style={{
               display: "flex",
               alignItems: "center",
@@ -121,19 +122,19 @@ function NavigationList({ dontShowContactUs, variant }) {
           </NavLink>
 
           <NavDropdownMenu $isOpen={isBlogOpen}>
-            <Link to="/blog">Blog</Link>
+            <Link to={path.blog}>Blog</Link>
           </NavDropdownMenu>
         </NavDropdownContainer>
       </li>
 
       <li>
-        <NavLink as={Link} to="/about">
+        <NavLink as={Link} to={path.about}>
           About Us
         </NavLink>
       </li>
       {!dontShowContactUs && (
         <li>
-          <NavLink as={Link} to="/contact">
+          <NavLink as={Link} to={path.contact}>
             Contact Us
           </NavLink>
         </li>

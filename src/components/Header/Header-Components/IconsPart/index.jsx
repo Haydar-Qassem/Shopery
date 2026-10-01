@@ -8,6 +8,7 @@ import UserProfileIcon from "../../../../assets/images/UserProfileIcon.jsx";
 import { PiHeartLight } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
+import { path } from "../../../../Constants/Paths.js";
 
 function IconsPart({ withSearch, variant }) {
   const addtoWishlist = () => {};
@@ -32,7 +33,7 @@ function IconsPart({ withSearch, variant }) {
           }}
         />
       )}
-      <a href="/wishlist" style={{ cursor: "pointer" }}>
+      <a href={path.wishlist} style={{ cursor: "pointer" }}>
         <PiHeartLight
           style={{
             width: "30px",
@@ -54,7 +55,7 @@ function IconsPart({ withSearch, variant }) {
 
       {user && (
         <a
-          href="/account/profile"
+          href={path.dashboard}
           style={{ cursor: "pointer" }}
         >
           <CiUser

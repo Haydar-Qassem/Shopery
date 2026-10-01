@@ -3,7 +3,7 @@ import useFormField from "../hooks/useFormField";
 import useFormFieldState from "../hooks/useFormFieldState";
 import { TextareaControl } from "./styles";
 
-function CustomTextarea({ name, label, placeholder, warning }) {
+function CustomTextarea({ name, label, placeholder, warning, span, optional }) {
   const { field, meta, visualState, handleFocus, handleBlur } =
     useFormField(name);
 
@@ -16,6 +16,8 @@ function CustomTextarea({ name, label, placeholder, warning }) {
       state={fieldState}
       error={meta.touched ? meta.error : undefined}
       warning={warning}
+      span={span}
+      optional={optional}
     >
       <TextareaControl
         {...field}

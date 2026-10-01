@@ -4,7 +4,15 @@ import useFormField from "../hooks/useFormField";
 import useFormFieldState from "../hooks/useFormFieldState";
 import { SelectChevron, SelectControl, SelectWrapper } from "./styles";
 
-function CustomSelect({ name, label, placeholder, options = [], warning }) {
+function CustomSelect({
+  name,
+  label,
+  placeholder,
+  options = [],
+  warning,
+  span,
+  optional,
+}) {
   const { field, meta, visualState, handleFocus, handleBlur } =
     useFormField(name);
 
@@ -17,6 +25,8 @@ function CustomSelect({ name, label, placeholder, options = [], warning }) {
       state={fieldState}
       error={meta.touched ? meta.error : undefined}
       warning={warning}
+      span={span}
+      optional={optional}
     >
       <SelectWrapper>
         <SelectControl

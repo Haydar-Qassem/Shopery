@@ -22,6 +22,8 @@ function CustomInput({
   label,
   placeholder,
   warning,
+  span,
+  optional
 }) {
   const { field, meta, visualState, handleFocus, handleBlur } =
     useFormField(name);
@@ -43,6 +45,8 @@ function CustomInput({
       state={fieldState}
       error={meta.touched ? meta.error : undefined}
       warning={warning}
+      span={span}
+      optional={optional}
     >
       {/* <div>State: {visualState}</div> */}
 

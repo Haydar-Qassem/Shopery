@@ -3,13 +3,14 @@ import shoppingBag from "../../../../../assets/images/ShoppingBag.svg";
 import { selectUser } from "../../../../../store/auth/authSelectors";
 import PriceAmount from "../../../../common/PriceAmount";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import { path } from "../../../../../Constants/Paths";
 
 function ShoppingBag() {
   const user = useSelector(selectUser);
 
   return (
     <a
-      href="/ShoppingCartPage"
+      href={path.cart}
       style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
     >
       <HiOutlineShoppingBag

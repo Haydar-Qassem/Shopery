@@ -3,12 +3,17 @@ import styled from "styled-components";
 export const FormFieldContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+
+  grid-column: span ${(props) => props.$span || 1};
 `;
 
 export const FormFieldLabel = styled.label`
-  font-size: 14px;
-  font-weight: 500;
+  font: var(--body-small-400);
+
+  span {
+    color: var(--gray-5);
+  }
 `;
 
 export const FormFieldControl = styled.div`

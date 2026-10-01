@@ -15,10 +15,16 @@ function FormField({
   error,
   warning,
   children,
+  span,
+  optional,
 }) {
   return (
-    <FormFieldContainer data-state={state}>
-      {label && <FormFieldLabel htmlFor={id}>{label}</FormFieldLabel>}
+    <FormFieldContainer data-state={state} $span={span}>
+      {label && (
+        <FormFieldLabel htmlFor={id}>
+          {label} {optional && <span>(Optional)</span>}
+        </FormFieldLabel>
+      )}
       <FormFieldControl>{children}</FormFieldControl>
       {error && (
         <FormFieldError>

@@ -22,6 +22,17 @@ export const ButtonStyles = styled.button`
           }
         `;
 
+      case "fill-gray":
+        return css`
+          background-color: var(--gray-half);
+          color: var(--gray-7);
+          border: none;
+          &:hover {
+            background-color: var(--primary);
+            color: var(--white);
+          }
+        `;
+
       case "border":
         return css`
           background-color: transparent;
@@ -36,12 +47,12 @@ export const ButtonStyles = styled.button`
 
       case "ghost":
         return css`
-          background-color: var(--primary) 10%;
+          background-color: rgb(from var(--primary) r g b / 10%);
           color: var(--primary);
           border: none;
           &:hover {
             color: var(--hard-primary);
-            background-color: var(--hard-primary) 20%;
+            background-color: rgb(from var(--hard-primary) r g b / 20%);
             /* transition: var(--transition); */
           }
         `;
