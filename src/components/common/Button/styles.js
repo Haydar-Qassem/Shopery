@@ -89,6 +89,7 @@ export const ButtonStyles = styled.button`
           padding: 14px 32px;
         `;
       case "large":
+      default:
         return css`
           font: var(--body-medium-600);
           padding: 16px 40px;
