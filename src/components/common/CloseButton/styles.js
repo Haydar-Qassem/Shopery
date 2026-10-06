@@ -58,4 +58,24 @@ export const StyledCloseButton = styled.button`
         font-size: 25px;
       }
     `}
+    
+  ${({ $variant }) =>
+    $variant === "transparent" &&
+    css`
+      background-color: transparent;
+      border: none;
+      color: var(--gray-9);
+      width: 45px;
+      height: 45px;
+      /* box-shadow: 0px 0px 6px rgba(from var(--gray-9) r g b / 0.1); */
+
+      &:hover {
+        background-color: var(--primary);
+        color: var(--white);
+      }
+
+      svg {
+        font-size: 25px;
+      }
+    `}
 `;

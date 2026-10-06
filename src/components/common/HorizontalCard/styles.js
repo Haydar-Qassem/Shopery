@@ -1,10 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const HorizontalCardContainer = styled.div`
   border: 1px solid var(--gray-1);
   border-radius: var(--radius);
   display: flex;
-  width: 424px;
+  width: ${(props) => (props.$size === "small" ? "312px" : "424px")};
   transition: var(--transition);
 
   &:hover {
@@ -15,16 +15,21 @@ export const HorizontalCardContainer = styled.div`
       color: var(--primary);
     }
 
-    .default-info {
-      opacity: 0;
-      visibility: hidden;
-    }
+    ${(props) => {
+      props.$size !== "small" &&
+        css`
+          .default-info {
+            opacity: 0;
+            visibility: hidden;
+          }
 
-    .hover-actions {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
+          .hover-actions {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+          }
+        `;
+    }}
   }
 `;
 

@@ -21,6 +21,7 @@ const DetailOrderHistoryPage = lazy(
   () => import("../pages/DetailOrderHistoryPage"),
 );
 const SettingsPage = lazy(() => import("../pages/SettingsPage"));
+const ProductDetailsPage = lazy(() => import("../pages/ProductDetailsPage"));
 
 const routes = [
   { path: path.home, element: <HomePage /> },
@@ -32,7 +33,7 @@ const routes = [
   { path: path.categoryDetails, element: <VegetablesPage /> },
   {
     path: path.productDetails,
-    element: <div>hello from product id page</div>,
+    element: <ProductDetailsPage />,
   },
   { path: path.cart, element: <ShoppingCartPage /> },
   { path: path.checkout, element: <CheckoutPage /> },

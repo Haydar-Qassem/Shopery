@@ -8,13 +8,14 @@ import {
   MetaRow,
 } from "./styles";
 
-export default function BlogCard({ data }) {
+export default function BlogCard({ data, onClick }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <BlogCardStyles
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={onClick}
     >
       <ImageWrapper>
         <img src={data.image} alt="Blog thumbnail" />

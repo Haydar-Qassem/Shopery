@@ -12,9 +12,14 @@ import Tag from "../Tag";
 import PriceAmount from "../PriceAmount";
 import { PiHeart, PiHeartLight } from "react-icons/pi";
 
-function ProductCard({ product, variant = "medium-sharp" }) {
+function ProductCard({
+  product,
+  variant = "medium-sharp",
+  onQuickView,
+  onClick,
+}) {
   return (
-    <CardStyles variant={variant}>
+    <CardStyles variant={variant} onClick={() => onClick(product)}>
       <ImageWrapper variant={variant}>
         <div className="tags-container">
           {product.Tags &&
@@ -31,7 +36,7 @@ function ProductCard({ product, variant = "medium-sharp" }) {
           <button>
             <PiHeart />
           </button>
-          <button>
+          <button onClick={() => onQuickView(product)}>
             <FiEye />
           </button>
         </HoverActions>

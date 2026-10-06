@@ -27,6 +27,11 @@ export const ButtonStyles = styled.button`
           background-color: var(--gray-half);
           color: var(--gray-7);
           border: none;
+          background-color: ${props.$isActive
+            ? "var(--primary)"
+            : "var(--gray-half)"};
+          color: ${props.$isActive ? "var(--white)" : "var(--gray-7)"};
+
           &:hover {
             background-color: var(--primary);
             color: var(--white);

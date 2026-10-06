@@ -9,11 +9,11 @@ import { PiHeartLight } from "react-icons/pi";
 import { CiSearch } from "react-icons/ci";
 import { CiUser } from "react-icons/ci";
 import { path } from "../../../../Constants/Paths.js";
+import ShoppingCartPopup from "../ShoppingCartPopup/index.jsx";
 
 function IconsPart({ withSearch, variant }) {
   const addtoWishlist = () => {};
   const user = useSelector(selectUser);
-  // const user = { name: "John Doe" }; // Mock user for demonstration
 
   return (
     <IconsPartStyles
@@ -54,10 +54,7 @@ function IconsPart({ withSearch, variant }) {
       <ShoppingBag />
 
       {user && (
-        <a
-          href={path.dashboard}
-          style={{ cursor: "pointer" }}
-        >
+        <a href={path.dashboard} style={{ cursor: "pointer" }}>
           <CiUser
             style={{
               width: "26px",

@@ -7,6 +7,7 @@ export const path = {
   // Shopping Flow
   category: "/shop/category",
   categoryDetails: "/shop/category/:categorySlug",
+  vegetables: "/shop/category/vegetables",
   productDetails: "/shop/product/:productId",
   cart: "/cart",
   checkout: "/checkout",
