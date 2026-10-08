@@ -5,6 +5,7 @@ export const path = {
   faqs: "/faqs",
 
   // Shopping Flow
+  shop: "/shop",
   category: "/shop/category",
   categoryDetails: "/shop/category/:categorySlug",
   vegetables: "/shop/category/vegetables",

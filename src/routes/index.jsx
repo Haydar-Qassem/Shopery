@@ -4,8 +4,8 @@ import { path } from "../Constants/Paths";
 
 const HomePage = lazy(() => import("../pages/HomePage"));
 const AboutPage = lazy(() => import("../pages/AboutPage"));
-const CategoriesPage = lazy(() => import("../pages/CategoriesPage"));
-const VegetablesPage = lazy(() => import("../pages/VegetablesPage"));
+// const CategoriesPage = lazy(() => import("../pages/CategoriesPage"));
+// const VegetablesPage = lazy(() => import("../pages/VegetablesPage"));
 const WishlistPage = lazy(() => import("../pages/WishlistPage"));
 const ShoppingCartPage = lazy(() => import("../pages/ShoppingCartPage"));
 const CheckoutPage = lazy(() => import("../pages/CheckoutPage"));
@@ -22,6 +22,8 @@ const DetailOrderHistoryPage = lazy(
 );
 const SettingsPage = lazy(() => import("../pages/SettingsPage"));
 const ProductDetailsPage = lazy(() => import("../pages/ProductDetailsPage"));
+const Logout = lazy(() => import("../pages/Logout"));
+const ShopPage = lazy(() => import("../pages/ShopPage"));
 
 const routes = [
   { path: path.home, element: <HomePage /> },
@@ -29,8 +31,9 @@ const routes = [
   { path: path.contact, element: <ContactPage /> },
   { path: path.faqs, element: <FAQsPage /> },
 
-  { path: path.category, element: <CategoriesPage /> },
-  { path: path.categoryDetails, element: <VegetablesPage /> },
+  // { path: path.category, element: <CategoriesPage /> },
+  { path: path.shop, element: <ShopPage /> },
+  // { path: path.categoryDetails, element: <VegetablesPage /> },
   {
     path: path.productDetails,
     element: <ProductDetailsPage />,
@@ -55,6 +58,7 @@ const routes = [
       },
       { path: path.settings, element: <SettingsPage /> },
       { path: path.wishlist, element: <WishlistPage /> },
+      { path: path.logout, element: <Logout /> },
     ],
   },
 ];

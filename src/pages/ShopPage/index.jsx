@@ -1,3 +1,4 @@
+import { ShopPageStyles } from "./styles";
 import {
   Filter,
   PriceLabel,
@@ -5,7 +6,6 @@ import {
   SliderContainer,
   Title,
   Top,
-  VegetablesPageStyles,
 } from "./styles";
 import ProductQuickView from "../../components/common/ProductQuickView";
 import { useState } from "react";
@@ -59,7 +59,7 @@ const sortOptions = [
   { value: "rating", label: "Average Rating" },
 ];
 
-function VegetablesPage() {
+function ShopPage() {
   const navigate = useNavigate();
 
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -100,9 +100,9 @@ function VegetablesPage() {
 
   return (
     <AppTemplate
-      pageTitle="Vegetables"
-      pageDescription="Vegetables Meta Description"
-      path={path.vegetables}
+      pageTitle="Shop"
+      pageDescription="Shop Meta Description"
+      path={path.shop}
       headerType="main"
       footerType="v1-gray-half"
       jsonLd={{
@@ -110,11 +110,11 @@ function VegetablesPage() {
         "@type": "WebSite",
         name: "App Name",
         url: environment.siteUrl,
-        description: "Vegetables Meta Description",
+        description: "Shop Meta Description",
       }}
     >
       <MyBreadcrumb />
-      <VegetablesPageStyles className="container">
+      <ShopPageStyles className="container">
         <Top>
           <Button
             variant="fill-gray"
@@ -371,9 +371,9 @@ function VegetablesPage() {
             </div>
           </Results>
         </div>
-      </VegetablesPageStyles>
+      </ShopPageStyles>
     </AppTemplate>
   );
 }
 
-export default VegetablesPage;
+export default ShopPage;

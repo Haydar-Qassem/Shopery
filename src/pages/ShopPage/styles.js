@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-export const VegetablesPageStyles = styled.div`
+export const ShopPageStyles = styled.div`
   padding-top: 24px;
   padding-bottom: 72px;
 `;

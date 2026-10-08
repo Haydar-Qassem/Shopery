@@ -73,7 +73,7 @@ function NavigationList({ dontShowContactUs, variant }) {
           </NavLink>
 
           <NavDropdownMenu $isOpen={isShopOpen}>
-            <Link to={path.category}>Categories</Link>
+            <Link to={path.shop}>Shop</Link>
             <Link to={path.wishlist}>Wishlist</Link>
             <Link to={path.cart}>Shopping Cart</Link>
           </NavDropdownMenu>
