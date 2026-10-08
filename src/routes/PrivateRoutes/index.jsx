@@ -8,18 +8,18 @@ function PrivateRoutes() {
 
   const isAuthorized = Cookies.get(environment.TOKEN_KEY);
 
-  return isAuthorized ? (
-    <Outlet />
-  ) : (
-    <Navigate to={path.login} state={{ from: location }} replace />
-  );
-
-  // the following is for testing private routes
-  // return true ? (
+  // return isAuthorized ? (
   //   <Outlet />
   // ) : (
-  //   <Navigate to="/account/login" state={{ from: location }} replace />
+  //   <Navigate to={path.login} state={{ from: location }} replace />
   // );
+
+  // the following is for testing private routes
+  return true ? (
+    <Outlet />
+  ) : (
+    <Navigate to="/account/login" state={{ from: location }} replace />
+  );
 }
 
 export default PrivateRoutes;

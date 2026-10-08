@@ -25,4 +25,5 @@ export const path = {
   orderDetails: "/account/orderhistory/:id",
   settings: "/account/settings",
   wishlist: "/wishlist",
+  logout: "/account/logout",
 };

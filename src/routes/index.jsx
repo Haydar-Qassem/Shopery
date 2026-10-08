@@ -50,7 +50,7 @@ const routes = [
       { path: path.dashboard, element: <DashboardPage /> },
       { path: path.orderHistory, element: <OrderHistoryPage /> },
       {
-        path: path.detailOrderHistory,
+        path: path.orderDetails,
         element: <DetailOrderHistoryPage />,
       },
       { path: path.settings, element: <SettingsPage /> },
